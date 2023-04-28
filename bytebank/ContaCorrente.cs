@@ -12,5 +12,7 @@ namespace bytebank
         public string conta;
         public string titular;
         public double saldo;
+        public string moeda;
+
     }
 }
