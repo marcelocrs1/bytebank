@@ -9,6 +9,7 @@ namespace bytebank
     public class ContaCorrente
     {
         public int numero_agencia;
+        public string nome_agencia;
         public string conta;
         public string titular;
         public double saldo;
@@ -44,6 +45,14 @@ namespace bytebank
                 destino.Depositar(valor);
                 return true;
             }
+        }
+        public void ExibirDadosDaConta()
+        {
+            Console.WriteLine("Titular :" + titular);
+            Console.WriteLine("Conta :" + conta);
+            Console.WriteLine("Número Agência :" + numero_agencia);
+            Console.WriteLine("Nome Agência :" + nome_agencia);
+            Console.WriteLine("Saldo: " + saldo);
         }
 
     }
