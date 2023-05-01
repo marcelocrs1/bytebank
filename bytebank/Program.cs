@@ -14,6 +14,13 @@ contaDaMaria.conta = "1010-5";
 contaDaMaria.saldo = 350;
 contaDaMaria.moeda = "R$";
 
+ContaCorrente contaDoPedro = new ContaCorrente();
+contaDoPedro.titular = "Pedro Silva";
+contaDoPedro.numero_agencia = 17;
+contaDoPedro.conta = "1010-8";
+contaDoPedro.saldo = 100;
+contaDoPedro.moeda = "R$";
+
 //Saldo inicial contas
 Console.WriteLine("Saldo da conta do André = " + contaDoAndre.moeda + contaDoAndre.saldo);
 Console.WriteLine("Saldo da conta da Maria = " + contaDaMaria.moeda + contaDaMaria.saldo);
