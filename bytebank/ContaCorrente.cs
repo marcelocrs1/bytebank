@@ -11,7 +11,7 @@ namespace bytebank
         public int numero_agencia;
         public string nome_agencia;
         public string conta;
-        public string titular;
+        public Cliente titular;
         public double saldo;
         public string moeda;
 
