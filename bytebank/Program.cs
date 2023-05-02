@@ -1,6 +1,7 @@
 ﻿using bytebank.Contas;
 using bytebank.Titular;
 
+//Dados pessoais dos clientes
 Cliente clienteAndre = new Cliente();
 clienteAndre.nome = "André Silva";
 clienteAndre.cpf = "12332332405";
@@ -16,6 +17,7 @@ clientePedro.nome = "Pedro Silva";
 clientePedro.cpf = "14556787678";
 clientePedro.profissao = "Software Developer";
 
+//Dados das contas dos clientes
 ContaCorrente contaDoAndre = new ContaCorrente();
 contaDoAndre.titular = clienteAndre;
 contaDoAndre.numero_agencia = 15;
