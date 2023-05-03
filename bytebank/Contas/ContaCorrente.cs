@@ -9,12 +9,94 @@ namespace bytebank.Contas
 {
     public class ContaCorrente
     {
-        public int numero_agencia;
-        public string nome_agencia;
-        public string conta;
-        public Cliente titular;
+        private int numero_agencia;
+        public int Numero_agencia
+        {
+            get { return numero_agencia; }
+            set
+            {
+                if (value > 0)
+                {
+                    this.numero_agencia = value;
+                }
+
+            }
+        }
+
+
+        private string nome_agencia;
+        public string Nome_agencia
+        {
+            get { return nome_agencia; }
+            set
+            {
+                if (value.Length < 3)
+                {
+                    Console.WriteLine("Nome da agencia precisa ter mais que 3 caracteres");
+                }
+                else
+                {
+                    this.nome_agencia = value;
+                }
+            }
+        }
+
+
+        private string conta;
+        public string Conta
+        {
+            get { return conta; }
+            set
+            {
+                if (value.Length < 4)
+                {
+                    Console.WriteLine("A conta precisa ter no minimo 4 dígitos");
+                }
+                else
+                {
+                    this.conta = value; 
+                }
+            }
+        }
+
+
+        public Cliente Titular { get; set; }
+
+
         private double saldo;
-        public string moeda;
+        public double Saldo
+        {
+            get { return saldo; }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    this.saldo = value;
+                }
+            }
+        }
+
+
+        private string moeda;
+        public string Moeda
+        {
+            get { return moeda; }
+            set
+            {
+                if (value.Length < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    this.moeda = value;
+                }
+            }
+        }
 
         public void Depositar(double valor)
         {
@@ -49,7 +131,7 @@ namespace bytebank.Contas
         }
         public void ExibirDadosDaConta()
         {
-            Console.WriteLine("Titular :" + titular);
+            Console.WriteLine("Titular :" + Titular);
             Console.WriteLine("Conta :" + conta);
             Console.WriteLine("Número Agência :" + numero_agencia);
             Console.WriteLine("Nome Agência :" + nome_agencia);
@@ -60,7 +142,7 @@ namespace bytebank.Contas
         {
             if (valor < 0)
             {
-                return;  
+                return;
             }
             else
             {
@@ -70,7 +152,7 @@ namespace bytebank.Contas
 
         public double GetSaldo()
         {
-            return this.saldo; 
+            return this.saldo;
         }
 
     }
