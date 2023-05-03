@@ -84,7 +84,9 @@ Console.WriteLine("Saldo da conta da Maria pós-transferência Recebida = " + co
 
 
 
-//Movimentos da Maria
+//Total de Contas Criadas
+
+Console.WriteLine("O total de contas criadas foi de: " + ContaCorrente.TotalDeContasCriadas);
 
 
 Console.WriteLine("Tecle enter para fechar ...");
