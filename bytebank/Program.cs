@@ -22,26 +22,26 @@ ContaCorrente contaDoAndre = new ContaCorrente();
 contaDoAndre.titular = clienteAndre;
 contaDoAndre.numero_agencia = 15;
 contaDoAndre.conta = "1010-X";
-contaDoAndre.saldo = 100;
+contaDoAndre.SetSaldo(100);
 contaDoAndre.moeda = "R$";
 
 ContaCorrente contaDaMaria = new ContaCorrente();
 contaDaMaria.titular = clienteMariaLuiza;
 contaDaMaria.numero_agencia = 17;
 contaDaMaria.conta = "1010-5";
-contaDaMaria.saldo = 350;
+contaDaMaria.SetSaldo(350);
 contaDaMaria.moeda = "R$";
 
 ContaCorrente contaDoPedro = new ContaCorrente();
 contaDoPedro.titular = clientePedro;
 contaDoPedro.numero_agencia = 17;
 contaDoPedro.conta = "1010-8";
-contaDoPedro.saldo = 100;
+contaDoPedro.SetSaldo(100);
 contaDoPedro.moeda = "R$";
 
 //Saldo inicial contas
-Console.WriteLine("Saldo da conta do " + contaDoAndre.titular.nome + " = " + contaDoAndre.moeda + contaDoAndre.saldo);
-Console.WriteLine("Saldo da conta do " + contaDaMaria.titular.nome + " = " + contaDaMaria.moeda + contaDaMaria.saldo);
+Console.WriteLine("Saldo da conta do " + contaDoAndre.titular.nome + " = " + contaDoAndre.moeda + contaDoAndre.GetSaldo());
+Console.WriteLine("Saldo da conta do " + contaDaMaria.titular.nome + " = " + contaDaMaria.moeda + contaDaMaria.GetSaldo());
 
 
 //Movimentos do André
@@ -49,11 +49,11 @@ Console.WriteLine("Saldo da conta do " + contaDaMaria.titular.nome + " = " + con
 
 contaDoAndre.Depositar(100);
 
-Console.WriteLine("Saldo da conta do André pós-deposito = " + contaDoAndre.moeda + contaDoAndre.saldo);
+Console.WriteLine("Saldo da conta do André pós-deposito = " + contaDoAndre.moeda + contaDoAndre.GetSaldo());
 
 if (contaDoAndre.Sacar(300) == true)
 {
-    Console.WriteLine("Saldo da conta do André pós-saque =" + contaDoAndre.saldo);
+    Console.WriteLine("Saldo da conta do André pós-saque =" + contaDoAndre.GetSaldo());
 }
 else
 {
@@ -61,8 +61,8 @@ else
 }
 
 contaDoAndre.Transferir(50, contaDaMaria);
-Console.WriteLine("Saldo da conta do André pós-transferência = " + contaDoAndre.moeda + contaDoAndre.saldo);
-Console.WriteLine("Saldo da conta da Maria pós-transferência Recebida = " + contaDaMaria.moeda + contaDaMaria.saldo);
+Console.WriteLine("Saldo da conta do André pós-transferência = " + contaDoAndre.moeda + contaDoAndre.GetSaldo());
+Console.WriteLine("Saldo da conta da Maria pós-transferência Recebida = " + contaDaMaria.moeda + contaDaMaria.GetSaldo());
 
 
 
