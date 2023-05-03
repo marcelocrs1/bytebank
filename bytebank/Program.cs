@@ -23,31 +23,31 @@ clientePedro.Cpf = "99999999999";
 clientePedro.Profissao = "Software Developer";
 
 //Dados das contas dos clientes
-ContaCorrente contaDoAndre = new ContaCorrente();
+ContaCorrente contaDoAndre = new ContaCorrente(15, "1010-X");
 contaDoAndre.Titular = clienteAndre;
-contaDoAndre.Numero_agencia = 15;
-contaDoAndre.Conta = "1010-X";
+//contaDoAndre.Numero_agencia = 15;
+//contaDoAndre.Conta = "1010-X";
 contaDoAndre.SetSaldo(100);
 contaDoAndre.Moeda = "R$";
 
-ContaCorrente contaDaMaria = new ContaCorrente();
+ContaCorrente contaDaMaria = new ContaCorrente(17, "1010-5");
 contaDaMaria.Titular = clienteMariaLuiza;
-contaDaMaria.Numero_agencia = 17;
-contaDaMaria.Conta = "1010-5";
+//contaDaMaria.Numero_agencia = 17;
+//contaDaMaria.Conta = "1010-5";
 contaDaMaria.SetSaldo(350);
 contaDaMaria.Moeda = "R$";
 
-ContaCorrente contaDoPedro = new ContaCorrente();
+ContaCorrente contaDoPedro = new ContaCorrente(17, "1010-8");
 contaDoPedro.Titular = clientePedro;
-contaDoPedro.Numero_agencia = 17;
-contaDoPedro.Conta = "1010-8";
+//contaDoPedro.Numero_agencia = 17;
+//contaDoPedro.Conta = "1010-8";
 contaDoPedro.SetSaldo(100);
 contaDoPedro.Moeda = "R$";
 
-ContaCorrente contaDoMarcelo = new ContaCorrente();
+ContaCorrente contaDoMarcelo = new ContaCorrente(10, "1010-1");
 contaDoMarcelo.Titular = clienteMarcelo;
-contaDoMarcelo.Numero_agencia = 10;
-contaDoMarcelo.Conta = "1010-1";
+//contaDoMarcelo.Numero_agencia = 10;
+//contaDoMarcelo.Conta = "1010-1";
 contaDoMarcelo.SetSaldo(1000);
 contaDoMarcelo.Moeda = "EUR";
 
@@ -56,6 +56,10 @@ contaDoMarcelo.Moeda = "EUR";
 Console.WriteLine("Saldo da conta do " + contaDoAndre.Titular.Nome + " = " + contaDoAndre.Moeda + " " + contaDoAndre.GetSaldo());
 Console.WriteLine("Saldo da conta do " + contaDaMaria.Titular.Nome + " = " + contaDaMaria.Moeda + " " + contaDaMaria.GetSaldo());
 Console.WriteLine("Saldo da conta do " + contaDoMarcelo.Titular.Nome + " = " + contaDoMarcelo.Moeda + " " + contaDoMarcelo.GetSaldo());
+
+//Numero da Agencia e conta dos clientes
+Console.WriteLine("Agencia do " + contaDoAndre.Titular.Nome + " = " + contaDoAndre.Numero_agencia + " Conta: " + contaDoAndre.Conta);
+
 
 
 //Movimentos do André

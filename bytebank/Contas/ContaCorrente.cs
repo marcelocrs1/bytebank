@@ -13,7 +13,7 @@ namespace bytebank.Contas
         public int Numero_agencia
         {
             get { return numero_agencia; }
-            set
+            private set
             {
                 if (value > 0)
                 {
@@ -46,7 +46,7 @@ namespace bytebank.Contas
         public string Conta
         {
             get { return conta; }
-            set
+            private set
             {
                 if (value.Length < 4)
                 {
@@ -155,5 +155,11 @@ namespace bytebank.Contas
             return this.saldo;
         }
 
+
+        public ContaCorrente(int numero_agencia, string numero_conta)
+        {
+            this.Numero_agencia = numero_agencia;
+            this.Conta = numero_conta;
+        }
     }
 }
