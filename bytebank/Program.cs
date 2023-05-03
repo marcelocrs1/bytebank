@@ -17,6 +17,11 @@ clientePedro.Nome = "Pedro Silva";
 clientePedro.Cpf = "14556787678";
 clientePedro.Profissao = "Software Developer";
 
+Cliente clienteMarcelo = new Cliente();
+clientePedro.Nome = "Marcelo Santos";
+clientePedro.Cpf = "99999999999";
+clientePedro.Profissao = "Software Developer";
+
 //Dados das contas dos clientes
 ContaCorrente contaDoAndre = new ContaCorrente();
 contaDoAndre.Titular = clienteAndre;
@@ -39,9 +44,18 @@ contaDoPedro.Conta = "1010-8";
 contaDoPedro.SetSaldo(100);
 contaDoPedro.Moeda = "R$";
 
+ContaCorrente contaDoMarcelo = new ContaCorrente();
+contaDoMarcelo.Titular = clienteMarcelo;
+contaDoMarcelo.Numero_agencia = 10;
+contaDoMarcelo.Conta = "1010-1";
+contaDoMarcelo.SetSaldo(1000);
+contaDoMarcelo.Moeda = "EUR";
+
+
 //Saldo inicial contas
-Console.WriteLine("Saldo da conta do " + contaDoAndre.Titular.Nome + " = " + contaDoAndre.Moeda + contaDoAndre.GetSaldo());
-Console.WriteLine("Saldo da conta do " + contaDaMaria.Titular.Nome + " = " + contaDaMaria.Moeda + contaDaMaria.GetSaldo());
+Console.WriteLine("Saldo da conta do " + contaDoAndre.Titular.Nome + " = " + contaDoAndre.Moeda + " " + contaDoAndre.GetSaldo());
+Console.WriteLine("Saldo da conta do " + contaDaMaria.Titular.Nome + " = " + contaDaMaria.Moeda + " " + contaDaMaria.GetSaldo());
+Console.WriteLine("Saldo da conta do " + contaDoMarcelo.Titular.Nome + " = " + contaDoMarcelo.Moeda + " " + contaDoMarcelo.GetSaldo());
 
 
 //Movimentos do André
